@@ -9,20 +9,83 @@
     <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     .w3-bar-block .w3-bar-item {padding:20px}
+    .navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(29, 28, 28);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: white;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(111, 108, 108);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
     </style>
   </head>
 <body>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button w3-text-grey w3-large">点击返回</a>
-  <a href="page2.html#medicine" onclick="w3_close()" class="w3-bar-item w3-button w3-large">北美保健品</a>
-  <a href="index.html#perfume" onclick="w3_close()" class="w3-bar-item w3-button w3-large">大牌香水</a>
-  <a href="#skincare" onclick="w3_close()" class="w3-bar-item w3-button w3-large">品牌护肤</a>
-  <a href="page2.html#snack" onclick="w3_close()" class="w3-bar-item w3-button w3-large">热门零食</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-large">关于我们</a>
-</nav>
+
+<div class="navbar w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"class="w3-bar-item w3-button w3-text-grey w3-large">点击返回</a>
+    <a href="page2.html#medicine" onclick="w3_close()" class="w3-bar-item w3-button w3-large">北美保健品</a>
+    <a href="index.html#perfume" onclick="w3_close()" class="w3-bar-item w3-button w3-large">大牌香水</a>
+    <div class="subnav">
+      <button class="subnavbtn w3-bar-item w3-button w3-large w3-bar-block">折扣女士包包<i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="page4.html#mk" onclick="w3_close()" class="w3-bar-item w3-button w3-medium">MICHAEL KORS</a>
+        <a href="page6.html" onclick="w3_close()" class="w3-bar-item w3-button w3-medium">COACH</a>
+        <a href="page5.html" onclick="w3_close()" class="w3-bar-item w3-button w3-medium">TORY BURCH</a>
+      </div>
+    </div>
+    <a href="index.html#perfume" onclick="w3_close()" class="w3-bar-item w3-button w3-large">男女双肩包</a>
+    <a href="page3.html#skincare" onclick="w3_close()" class="w3-bar-item w3-button w3-large">品牌护肤</a>
+    <a href="page2.html#snack" onclick="w3_close()" class="w3-bar-item w3-button w3-large">热门零食</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-text-grey w3-large">关于我们</a>
+
+</div>
+
+
 
 <!-- Top menu -->
 <div class="w3-top">
